@@ -21,6 +21,8 @@ Laravel is a web application framework with expressive, elegant syntax. We belie
 
 Laravel is accessible, powerful, and provides tools required for large, robust applications.
 
+## Postman Collection
+You can get our project web (Rest Api) service collection from <a href="https://github.com/hojjatfazayeli/Back-End-Full-Service-Time-Table-University_Rest-Api/blob/main/postmanCollection/University-Time-Table.postman_collection.json">Here<a/>. 
 
 ### Premium Partners
 
