@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Controllers\AdminPanel\Lecture-TimeTable;
+namespace App\Http\Controllers\AdminPanel\Lecture_TimeTable;
 
+use App\Http\Controllers\Controller;
 use App\Http\Requests\LectureTimeTableStoreRequest;
 use App\Http\Requests\LectureTimeTableUpdateRequest;
 use App\Http\Resources\LectureTimeTableResource;

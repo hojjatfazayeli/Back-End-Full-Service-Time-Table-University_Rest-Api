@@ -62,7 +62,7 @@ class FacultyTimeTableSemesterController extends Controller
     {
         $weeks = [1,2];
         $days = [1,2,3,4,5,6,7];
-        $diffrence_time = $semester->end_time - $semester->start_time;
+        $diffrence_time = (int)$semester->end_time - (int) $semester->start_time;
         foreach ($weeks as $key => $week)
         {
             foreach ($days as $key => $day)
@@ -74,8 +74,8 @@ class FacultyTimeTableSemesterController extends Controller
                             'week' => $week,
                             'day' => $day,
                             'code' => $i,
-                            'start_time' => ($semester->start_time +$i) - 1,
-                            'end_time' => $semester->start_time +$i,
+                            'start_time' => (int)$semester->start_time +$i - 1,
+                            'end_time' => (int)$semester->start_time +$i,
                             'university_id' => $semester->university_id,
                             'faculty_id' => $semester->faculty_id,
                             'semester_id' => $semester->id,

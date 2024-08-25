@@ -97,11 +97,19 @@ Route::middleware('auth:sanctum')->group(function () {
 
     //Lecture-Time_Table
     Route::prefix('lecture/time/table')->group(function (){
-        Route::post('store',[TimeTable\LectureTimeTableController::class,'store']);
-        Route::get('list',[TimeTable\LectureTimeTableController::class,'index']);
-        Route::get('{lecture_time_table}/show',[TimeTable\LectureTimeTableController::class,'show']);
-        Route::put('{lecture_time_table}/update',[TimeTable\LectureTimeTableController::class,'update']);
-        Route::post('delete',[TimeTable\LectureTimeTableController::class,'autoDestroy']);
+        Route::post('store',[\App\Http\Controllers\AdminPanel\Lecture_TimeTable\LectureTimeTableController::class,'store']);
+//        Route::get('list',[TimeTable\LectureTimeTableController::class,'index']);
+//        Route::get('{lecture_time_table}/show',[TimeTable\LectureTimeTableController::class,'show']);
+//        Route::put('{lecture_time_table}/update',[TimeTable\LectureTimeTableController::class,'update']);
+//        Route::post('delete',[TimeTable\LectureTimeTableController::class,'autoDestroy']);
+    });
+
+    Route::prefix('plan')->group(function (){
+        Route::get('auto/generate',[\App\Http\Controllers\AdminPanel\Auto_Generate_Plan\AutoGeneratePlanController::class,'autoGeneratePlan']);
+//        Route::get('list',[TimeTable\LectureTimeTableController::class,'index']);
+//        Route::get('{lecture_time_table}/show',[TimeTable\LectureTimeTableController::class,'show']);
+//        Route::put('{lecture_time_table}/update',[TimeTable\LectureTimeTableController::class,'update']);
+//        Route::post('delete',[TimeTable\LectureTimeTableController::class,'autoDestroy']);
     });
 
     //Faculty-Time-Table-Semester

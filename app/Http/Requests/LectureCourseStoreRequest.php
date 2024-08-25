@@ -26,8 +26,8 @@ class LectureCourseStoreRequest extends FormRequest
             'faculty_id' => ['required' ,'exists:faculties,id'],
             'scientific_group_id' => ['required' ,'exists:scientific_groups,id'],
             'semester_id' => ['required' ,'exists:semesters,id'],
-            'lecture_id' => ['required' ,'exists:semesters,id'],
-            'course_id' => ['required' ,'exists:semesters,id'],
+            'lecture_id' => ['required' ,'exists:lectures,id'],
+            'course_id' => ['required' ,'exists:courses,id'],
         ];
     }
 }
